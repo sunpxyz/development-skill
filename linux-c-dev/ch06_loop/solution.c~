@@ -1,0 +1,24 @@
+/*
+ * ch06/solution.c
+ * 2022/06/06
+ */
+
+#include <stdio.h>
+
+int main(void)
+{
+    int n = 100, cnt = 0;
+
+    for (int i = 1; i <= n; i++) {
+        int tmp = i;
+        while (tmp != 0) {
+            if (tmp % 10 == 9) {
+                cnt++;
+            }
+            tmp /= 10;
+        }
+    }
+    printf("total is %d\n", cnt);
+    
+    return 0;
+}
